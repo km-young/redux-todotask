@@ -61,7 +61,13 @@ export default function Input({setTodos}) {
           onChange={handleChangeContents}
           placeholder={'내용을 입력해주세요.'}
         />
-        <Buttons btBgColor='#e0cbff' width='150px' fontSize='25px' paddingTop='9px'>
+        <Buttons
+          btBgColor='#e0cbff'
+          width='150px'
+          fontSize='25px'
+          paddingTop='9px'
+          mediaWidth='80%'
+        >
           등록
         </Buttons>
       </form>

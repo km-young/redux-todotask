@@ -1,13 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Buttons({children, btBgColor, fontSize, width, paddingTop}) {
+export default function Buttons({
+  children,
+  btBgColor,
+  fontSize,
+  width,
+  paddingTop,
+  onClick,
+  mediaWidth,
+}) {
   return (
     <ButtonStyle
       btBgColor={btBgColor}
       fontSize={fontSize}
       width={width}
       paddingTop={paddingTop}
+      onClick={onClick}
+      mediaWidth={mediaWidth}
     >
       {children}
     </ButtonStyle>
@@ -25,5 +35,8 @@ const ButtonStyle = styled.button`
   filter: drop-shadow(2px 2px 3px);
   &:active{
     filter: drop-shadow(1px 1px 1px);
+  }
+  @media screen and (max-width:900px ){
+    width: ${(props)=>props.mediaWidth}
   }
 `;

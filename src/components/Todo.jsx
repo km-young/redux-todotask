@@ -5,7 +5,7 @@ import { deleteTodo, switchTodo } from '../redux/modules/todo';
 import Buttons from './Buttons';
 
 export default function Todo({item, isActive}) {
-  const todos = useSelector((state) => state.todos);
+  const {todos} = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   const handleDeletButtonClick = () => {

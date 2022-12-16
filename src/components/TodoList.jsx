@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSelector,useDispatch } from 'react-redux';
 
 export default function TodoList({ isActive }) {
-  const todos = useSelector((state) => state.todos);
+  const {todos} = useSelector((state) => state.todos);
   console.log("todos:",todos)
   return (
     <>
